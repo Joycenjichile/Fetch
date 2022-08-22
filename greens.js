@@ -2,36 +2,34 @@ fetch('http://localhost:5000/products')
 .then(function(response) {
     return response.json();
 })
-.then(function(info) {
- console.log(info);
+.then(function(pro) {
+ console.log(pro);
 
-let myProducts = document.getElementById('products')
-info.forEach(i => {
-    let ItemList = document.createElement('li')
-    ItemList.innerText = `${i.name}`
-    myProducts.appendChild(ItemList)
+let pro = document.getElementById('products')
+pro.forEach(y => {
+    let List = document.createElement('li')
+    pro.appendChild(list)
 })
 })
 .catch(function(error){
- console.log('error',error);
+ console.log('error');
 });
 
 fetch('http://localhost:5000/products/Fruits')
 .then(function(response) {
     return response.json();
 })
-.then(function(info) {
- console.log(info);
+.then(function(fru) {
+ console.log(fru);
 
-let myProducts = document.getElementById('products')
-info.forEach(i => {
+let fetchfruits = document.getElementById('fruits')
+fetchfruits.forEach(fruit => {
     let ItemList = document.createElement('li')
-    ItemList.innerText = `${i.name}`
-    myProducts.appendChild(ItemList)
+     fetchfruits.appendChild(ItemList)
 })
 })
 .catch(function(error){
- console.log('error',error);
+ console.log('error');
 });
 
 
@@ -39,18 +37,17 @@ fetch('http://localhost:5000/products/vegetables')
 .then(function(response) {
     return response.json();
 })
-.then(function(info) {
- console.log(info);
+.then(function(vege) {
+ console.log(vege);
 
-let myProducts = document.getElementById('products')
-info.forEach(i => {
-    let ItemList = document.createElement('li')
-    ItemList.innerText = `${i.name}`
-    myProducts.appendChild(ItemList)
+let vege = document.getElementById('vegetables')
+vege.forEach(vegetables=> {
+    let Item = document.createElement('li')
+   vege.appendChild(Item)
 })
 })
 .catch(function(error){
- console.log('error',error);
+ console.log('error');
 });
 
 
